@@ -79,12 +79,23 @@ A minimal CSV should contain (column names can be configured in the GUI):
 Example: `examples/inputs/boreholes_example.csv`
 
 ### Key parameters
+
+
 λ: ground thermal conductivity [W/m/K]
+
 ρc: volumetric heat capacity [J/m³/K]
+
 u_w: Darcy seepage velocity [m/s]
+
 θ: groundwater flow direction [deg]
+
 Δx, Δy, Δz: grid spacing [m]
+
 r_cutoff: influence-radius cutoff [m] (optional)
+
+
+
+
 ---
 
 ## Reproducibility
