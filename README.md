@@ -19,27 +19,13 @@ The software supports:
 
 ## Features
 
-Import borehole layouts from CSV (geographic or local coordinates)
-
-Long-term temperature-disturbance simulation including groundwater advection (MFLS)
-
-Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
-
-Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
-
-environmental temperature change limit: ΔT_env
-
-neighbor-induced thermal interference limit: ΔT_nb
-
-Performance options for large arrays (e.g., parallel evaluation of source–target interactions)
-
-If you prefer an even cleaner “code-like” style (often better for software users):
-
-… thresholds:
-
-dT_env (environmental temperature change limit)
-
-dT_nb (neighbor-induced interference limit)
+- Import borehole layouts from CSV (geographic or local coordinates)
+- Long-term temperature-disturbance simulation including groundwater advection (MFLS)
+- Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
+- Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
+  - environmental temperature change limit: ΔT_env
+  - neighbor-induced thermal interference limit: ΔT_nb
+- Performance options for large arrays (e.g., parallel evaluation of source–target interactions)
 
 ---
 
@@ -71,8 +57,8 @@ streamlit run app.py
 
 Then in the GUI:
 1. Upload a borehole CSV (see `examples/inputs/`).
-2. Enter hydrothermal parameters (\(\lambda\), \(\rho c\), groundwater velocity and direction).
-3. Set thresholds (\(\Delta T_{\mathrm{env}}\), \(\Delta T_{\mathrm{nb}}\)) and solver settings.
+2. Enter hydrothermal parameters (λ, ρc, groundwater velocity and direction).
+3. Set thresholds (ΔT_env, ΔT_nb) and solver settings.
 4. Run simulation and/or optimization and inspect outputs.
 
 ---
@@ -94,21 +80,12 @@ Example: `examples/inputs/boreholes_example.csv`
 
 ### Key parameters
 
-
-λ: ground thermal conductivity [W/m/K]
-
-ρc: volumetric heat capacity [J/m³/K]
-
-u_w: Darcy seepage velocity [m/s]
-
-θ: groundwater flow direction [deg]
-
-Δx, Δy, Δz: grid spacing [m]
-
-r_cutoff: influence-radius cutoff [m] (optional)
-
-
-
+- λ: ground thermal conductivity [W/m/K]
+- ρc: volumetric heat capacity [J/m³/K]
+- u_w: Darcy seepage velocity [m/s]
+- θ: groundwater flow direction [deg]
+- Δx, Δy, Δz: grid spacing [m]
+- r_cutoff: influence-radius cutoff [m] (optional)
 
 ---
 
