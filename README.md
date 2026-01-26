@@ -136,11 +136,8 @@ compute time:
     viz/                       # plotting utilities
   examples/                    # example inputs and configs
   scripts/                     # reproducibility scripts
-  docs/                        # extra documentation
-  tests/                       # unit tests (optional)
   requirements.txt
   LICENSE
-  CITATION.cff                 # citation metadata (recommended)
 ```
 
 ---
