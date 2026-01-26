@@ -19,13 +19,27 @@ The software supports:
 
 ## Features
 
-- Import borehole layouts from CSV (geographic or local coordinates)
-- Long-term temperature-disturbance simulation including groundwater advection (MFLS)
-- Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
-- Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
-  - environmental temperature change limit: \(\Delta T_{\mathrm{env}}\)
-  - neighbor-induced thermal interference limit: \(\Delta T_{\mathrm{nb}}\)
-- Performance options for large arrays (e.g., parallel evaluation of source–target interactions)
+Import borehole layouts from CSV (geographic or local coordinates)
+
+Long-term temperature-disturbance simulation including groundwater advection (MFLS)
+
+Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
+
+Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
+
+environmental temperature change limit: ΔT_env
+
+neighbor-induced thermal interference limit: ΔT_nb
+
+Performance options for large arrays (e.g., parallel evaluation of source–target interactions)
+
+If you prefer an even cleaner “code-like” style (often better for software users):
+
+… thresholds:
+
+dT_env (environmental temperature change limit)
+
+dT_nb (neighbor-induced interference limit)
 
 ---
 
