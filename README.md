@@ -1,8 +1,8 @@
 # BHEOpt V1.0
 
-**BHEOpt** is an open-source software tool (with a web-based GUI) for long-term temperature-disturbance
+**BHEOpt** is an open-source software tool (with a web-based GUI) for long-term temperature disturbance
 simulation and constrained thermal-load optimization of clustered borehole heat exchanger (BHE) fields
-under site-specific hydrothermal conditions, including advective heat transport associated with
+under site-specific hydrothermal conditions, including advective heat transport induced by
 groundwater flow.
 
 The software supports:
@@ -19,7 +19,7 @@ The software supports:
 
 ## Features
 
-- Import borehole layouts from CSV (geographic or local coordinates)
+- Import borehole layouts from CSV (geographic or local coordinates, with BHE length and initial loads)
 - Long-term temperature-disturbance simulation including groundwater advection (MFLS)
 - Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
 - Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
@@ -31,14 +31,11 @@ The software supports:
 
 ## Installation
 
-### Option A: Install from source (recommended)
-
 ```bash
 git clone https://github.com/<ORG>/<REPO>.git
 cd <REPO>
 python -m venv .venv
-source .venv/bin/activate  # macOS/Linux
-# .venv\Scripts\activate  # Windows
+source # .venv\Scripts\activate  # Windows
 pip install -U pip
 pip install -r requirements.txt
 ```
