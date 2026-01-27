@@ -1,0 +1,17 @@
+name: bheopt
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - plotly
+  - streamlit
+  - joblib
+  - pyproj
+  - pip
+  # If you need any pip-only packages, add them here:
+  # - pip:
+  #     - package_name
