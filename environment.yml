@@ -6,8 +6,10 @@ dependencies:
   - numpy
   - scipy
   - pandas
+  - folium
   - matplotlib
   - plotly
+  - PIL
   - streamlit
   - joblib
   - pyproj
