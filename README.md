@@ -94,13 +94,10 @@ Scripts and example inputs are provided to reproduce key results from the paper:
   - Inputs: `examples/validation_case/`
 
 -  Sensitivity case:
-  - Inputs: `examples/inputs/optimization_case/`
+  - Inputs: `examples/sensitivity_case/`
 
 - Case study (Göttingen):
   - Inputs: `examples/inputs/goettingen_case/`
-
-Outputs (figures/tables) are written to:
-- `outputs/figures/`
 
 > Note: COMSOL models are not included. The repository reproduces BHEOpt results; COMSOL is used in the manuscript
 
