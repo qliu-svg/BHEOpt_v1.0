@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 25 09:18:06 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 # utils.py
@@ -69,4 +68,5 @@ def assign_sources_to_nearest_nodes(sources, x_grid, y_grid):
         j = int(np.clip(j, 0, len(xg) - 1))
         i = int(np.clip(i, 0, len(yg) - 1))
         node_map.setdefault((i, j), []).append(idx)
+
     return node_map
