@@ -11,9 +11,10 @@ dependencies:
   - plotly
   - PIL
   - streamlit
+  - streamlit_folium
   - joblib
   - pyproj
+  - random
+  - math
   - pip
-  # If you need any pip-only packages, add them here:
-  # - pip:
-  #     - package_name
+
