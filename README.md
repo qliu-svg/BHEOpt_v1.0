@@ -36,7 +36,7 @@ The software supports:
 
 ```bash
 git clone https://github.com/qliu-svg/BHEOpt_v1.0.git
-cd BHEOpt_v1.0
+cd BHEOpt_v1.0-main
 conda env create -f environment.yml
 conda activate bheopt
 streamlit run bheopt/GUI.py
