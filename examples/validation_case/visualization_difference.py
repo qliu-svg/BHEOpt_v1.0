@@ -9,7 +9,6 @@ import plotly.graph_objects as go
 
 # Load both .npz files
 temp1 = np.load('temp_interp_opt_BHEOpt_gm_30m.npy')
-# temp2 = np.load('temp_interp_opt_BHEOpt_gm_60m.npy')
 temp2 = np.load('temp_interp_opt_comsol_gm_30m.npy')
 
 # Compute absolute difference
@@ -112,3 +111,4 @@ fig.add_trace(go.Scatter(
 # Show the plot in browser
 
 fig.show(renderer="browser")
+
