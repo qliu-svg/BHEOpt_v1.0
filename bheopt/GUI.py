@@ -75,8 +75,8 @@ with st.sidebar.expander("📁 File Import"):
 
             lat_col = detect_column(["lat"])
             lon_col = detect_column(["long"])
-            len_col = detect_column(["leng"])
-            load_col = detect_column(["load"])
+            len_col = detect_column(["H"])
+            load_col = detect_column(["q0"])
             x_col = detect_column(["x"]) if not lon_col else None
             y_col = detect_column(["y"]) if not lat_col else None
 
