@@ -32,7 +32,7 @@ The software supports:
 ## Installation
 
 ```bash
-git clone https://github.com/<ORG>/<REPO>.git
+git clone https://github.com/qliu-svg/BHEOpt_v1.0.git
 cd <REPO>
 python -m venv .venv
 source # .venv\Scripts\activate  # Windows
