@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Mar 29 08:17:58 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 # main_refactor.py
@@ -65,3 +64,4 @@ def run_optimization(sources, H_array, V_T, ANGLE, A, LAMDA, point_density, maxi
         logs.append(msg)
     result = optimize_heat_load(sources, H_array, callback_logger=logger, V_T=V_T, ANGLE=ANGLE, A=A, LAMDA=LAMDA, R_w=spacing, maxiter=maxiter, ftol=ftol, eps=eps, lim_env=lim_env, lim_neigh=lim_neigh, low_lim=low_lim, up_lim=up_lim)
     return result, logs
+
