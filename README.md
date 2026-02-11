@@ -20,7 +20,7 @@ The software supports:
 ## Features
 
 - Import borehole layouts from CSV (geographic or local coordinates, with BHE length and initial loads)
-- Long-term temperature-disturbance simulation including groundwater advection (MFLS)
+- Long-term temperature-disturbance simulation including groundwater advection
 - Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
 - Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
   - environmental temperature change limit: ΔT_env
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 Run the Streamlit application:
 
 ```bash
-streamlit run app.py
+streamlit run GUI.py
 ```
 
 Then in the GUI:
@@ -73,16 +73,16 @@ A minimal CSV should contain (column names can be configured in the GUI):
 | H | borehole length | m |
 | q0 | initial thermal load per length | W/m |
 
-Example: `examples/inputs/boreholes_example.csv`
+Example: `examples/BHE_***.csv`
 
 ### Key parameters
 
 - λ: ground thermal conductivity [W/m/K]
-- ρc: volumetric heat capacity [J/m³/K]
+- ρc: volumetric heat capacity [MJ/m³/K]
 - u_w: Darcy seepage velocity [m/s]
 - θ: groundwater flow direction [deg]
-- Δx, Δy, Δz: grid spacing [m]
-- r_cutoff: influence-radius cutoff [m] (optional)
+- Δx, Δy: grid spacing [m]
+- r_virtual: influence-radius cutoff [m]
 
 ---
 
@@ -90,20 +90,17 @@ Example: `examples/inputs/boreholes_example.csv`
 
 Scripts and example inputs are provided to reproduce key results from the paper:
 
-- Forward-model validation case:
-  - Inputs: `examples/inputs/validation_case/`
-  - Command: `python scripts/run_forward_validation.py`
-- Optimization validation case:
+- Forward-model and optimization validation case:
+  - Inputs: `examples/validation_case/`
+
+-  Sensitivity case:
   - Inputs: `examples/inputs/optimization_case/`
-  - Command: `python scripts/run_optimization_validation.py`
+
 - Case study (Göttingen):
   - Inputs: `examples/inputs/goettingen_case/`
-  - Command: `python scripts/run_case_study.py`
 
 Outputs (figures/tables) are written to:
 - `outputs/figures/`
-- `outputs/tables/`
-- `outputs/logs/`
 
 > Note: COMSOL models are not included. The repository reproduces BHEOpt results; COMSOL is used in the manuscript
 
@@ -125,14 +122,15 @@ compute time:
 
 ```text
 <REPO>/
-  app.py                      # Streamlit entry point
+
   bheopt/                      # core library
-    io/                        # input parsing, validation
-    forward/                   # FLS/MFLS models + superposition
-    optimize/                  # objective + constraints + SLSQP
-    viz/                       # plotting utilities
+    GUI.py                     # Streamlit entry point
+    borehole_model/            # FLS/MFLS models + superposition + temperature change field simulation
+    main_refactor/             # plotting for temperature change field under initial and optimized loads + optimization operation
+    optimization/              # analytically computating of defined constraints + solving the objective issue
+    utils/                     # numerical utilities
+    visualization/             # plotting utilities
   examples/                    # example inputs and configs
-  scripts/                     # reproducibility scripts
   requirements.txt
   LICENSE
 ```
