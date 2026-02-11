@@ -51,7 +51,7 @@ streamlit run bheopt/GUI.py
 Run the Streamlit application:
 
 ```bash
-streamlit run GUI.py
+streamlit run bheopt/GUI.py
 ```
 
 Then in the GUI:
