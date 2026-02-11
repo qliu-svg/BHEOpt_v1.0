@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Apr 12 08:42:42 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 import numpy as np
@@ -111,4 +110,5 @@ fig.add_trace(go.Scatter(
 ))
 
 # Show the plot in browser
+
 fig.show(renderer="browser")
