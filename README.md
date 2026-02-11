@@ -11,7 +11,7 @@ The software supports:
 - **Thermal-load optimization** under nonlinear constraints on environmental temperature change and 
   thermal interference between BHEs.
 
-> Paper: *BHEOpt V1.0: Open-source software with a GUI for borehole heat exchanger field simulation and thermal load optimization considering groundwater flow*  
+> Paper: *BHEOpt V1.0: Open-source software with a GUI for borehole heat exchanger field simulation and thermal load optimization with groundwater flow effects*  
 > Target journal: *Computers & Geosciences*  
 > License: MIT
 
