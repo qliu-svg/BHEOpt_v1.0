@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 25 09:27:58 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 # optimization.py
@@ -90,3 +89,4 @@ def optimize_heat_load(locations, H_array, callback_logger, V_T, ANGLE, A, LAMDA
     result.res_neigh = 1.5 - max_neigh    # >=0 means satisfied
 
     return result
+
