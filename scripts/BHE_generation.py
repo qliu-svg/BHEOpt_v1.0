@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed Jan 28 19:13:27 2026
+Created on Wed Feb 11 10:21:54 2026
 
-@author: siam
+@author: qliu
 """
 
 import random
@@ -51,3 +50,4 @@ with open(OUT_CSV, "w", newline="", encoding="utf-8") as f:
         w.writerow([i, round(x, 3), round(y, 3), H, Q0])
 
 print(f"Saved {N} boreholes to {OUT_CSV}")
+
