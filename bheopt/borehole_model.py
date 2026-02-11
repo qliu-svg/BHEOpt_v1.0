@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 25 09:27:20 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 # # borehole_model.py
@@ -108,5 +107,6 @@ def compute_temperature_grid(grid_x, grid_y, sources, H_array, heat_rates, obs_z
                 temp_map[i, j] = t_self + t_neigh
             else:
                 temp_map[i, j] = compute_neighbor_Tchange(x, y, [obs_z], sources, H_array, heat_rates, V_T=V_T, ANGLE=ANGLE, A=A, LAMDA=LAMDA)[0]
+
 
     return temp_map
