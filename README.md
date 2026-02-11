@@ -128,7 +128,7 @@ compute time:
     utils/                     # numerical utilities
     visualization/             # plotting utilities
   examples/                    # example inputs and configs
-  requirements.txt
+  environment.yml
   LICENSE
 ```
 
