@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Mar 25 09:27:39 2025
+Created on Wed Feb 11 10:21:54 2026
 
-@author: Siam
+@author: qliu
 """
 
 # visualization.py
@@ -170,3 +169,4 @@ def plot_temperature_heatmap(grid_x, grid_y, sources, H_array, heat_rates, obs_z
         "min_q": float(min_heat),
         "max_q": float(max_heat)
     }
+
