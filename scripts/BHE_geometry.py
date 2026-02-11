@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # 1) Load your CSV
-df = pd.read_csv("BHE_generated_150.csv")
+df = pd.read_csv("BHE_generated_200.csv")
 
 # 2) Plot points
 plt.figure(figsize=(5, 4.7))
@@ -27,4 +27,5 @@ plt.grid(True, linewidth=0.5, alpha=0.4)
 plt.tight_layout()
 plt.show()
 # plt.savefig("test1.png", bbox_inches="tight", dpi=300)
+
 
