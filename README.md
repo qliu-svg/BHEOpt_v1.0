@@ -55,7 +55,7 @@ streamlit run bheopt/GUI.py
 ```
 
 Then in the GUI:
-1. Upload a borehole CSV (see `examples/inputs/`).
+1. Upload a borehole CSV (see `examples/`).
 2. Enter hydrothermal parameters (λ, ρc, groundwater velocity and direction).
 3. Set thresholds (ΔT_env, ΔT_nb) and solver settings.
 4. Run simulation and/or optimization and inspect outputs.
