@@ -93,11 +93,11 @@ Scripts and example inputs are provided to reproduce key results from the paper:
 - Forward-model and optimization validation case:
   - Inputs: `examples/validation_case/`
 
--  Sensitivity case:
+- Sensitivity case:
   - Inputs: `examples/sensitivity_case/`
 
-- Case study (Göttingen):
-  - Inputs: `examples/inputs/goettingen_case/`
+- Case study:
+  - Inputs: `examples/application/`
 
 > Note: COMSOL models are not included. The repository reproduces BHEOpt results; COMSOL is used in the manuscript
 
