@@ -31,13 +31,15 @@ The software supports:
 
 ## Installation
 
+**Prerequisites**
+- Install **Miniconda** or **Anaconda**
+
 ```bash
 git clone https://github.com/qliu-svg/BHEOpt_v1.0.git
 cd BHEOpt_v1.0
-python -m venv .venv
-.\.venv\Scripts\activate  # Windows
-pip install -U pip
-pip install -r requirements.txt
+conda env create -f environment.yml
+conda activate bheopt
+streamlit run bheopt/GUI.py
 ```
 
 **Tested on:** [Windows], Python [3.11].
