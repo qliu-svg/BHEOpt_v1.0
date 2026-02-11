@@ -33,9 +33,9 @@ The software supports:
 
 ```bash
 git clone https://github.com/qliu-svg/BHEOpt_v1.0.git
-cd <REPO>
+cd BHEOpt_v1.0
 python -m venv .venv
-source # .venv\Scripts\activate  # Windows
+.\.venv\Scripts\activate  # Windows
 pip install -U pip
 pip install -r requirements.txt
 ```
