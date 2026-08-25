@@ -6,26 +6,37 @@ under site-specific hydrothermal conditions, including advective heat transport 
 groundwater flow.
 
 The software supports:
-- **Forward simulation** of temperature change fields using moving finite line source (MFLS)
-  formulations and superposition principle on a structured grid.
-- **Thermal-load optimization** under nonlinear constraints on environmental temperature change and 
-  thermal interference between BHEs.
+- **Forward simulation** of steady-state annual peak temperature disturbances using the moving
+  finite line source (MFLS) analytical formulation with structured-grid superposition.
+- **Seasonal load variability** via a steady-state periodic extension of the MFLS, which captures
+  both the annual-mean drift and the annual peak disturbance under a cyclic heat load
+  `q(t) = q̄[1 + A cos(ωt)]` without transient time-stepping.
+- **Thermal-load optimization** with cellwise linear inequality constraints on environmental
+  temperature change and neighbour-induced thermal interference, solved with SLSQP.
 
-> Paper: *BHEOpt V1.0: Open-source software with a GUI for borehole heat exchanger field simulation and thermal load optimization with groundwater flow effects*  
-> Target journal: *Computers & Geosciences*  
-> License: MIT
+> **Paper:** *BHEOpt V1.0: Open-source software with a GUI for borehole heat exchanger field
+> simulation and thermal load optimization with groundwater flow effects*  
+> **Target journal:** *Computers & Geosciences*  
+> **License:** MIT
 
 ---
 
 ## Features
 
 - Import borehole layouts from CSV (geographic or local coordinates, with BHE length and initial loads)
-- Long-term temperature-disturbance simulation including groundwater advection
-- Structured-grid evaluation and spatial diagnostics (2D horizontal slices)
+- Long-term ground-temperature disturbance simulation including groundwater advection (MFLS model)
+- Seasonal periodic load support: annual-mean load `q̄` plus seasonal amplitude coefficient `A`;
+- Annual peak disturbance operator `ΔT_MAX = |ΔT̄| + |ΔT̃|` combining mean drift and harmonic
+  amplitude
+- Structured-grid evaluation and spatial diagnostics
 - Constrained thermal-load optimization (SLSQP) with user-defined thresholds:
-  - environmental temperature change limit: ΔT_env
-  - neighbor-induced thermal interference limit: ΔT_nb
-- Performance options for large arrays (e.g., parallel evaluation of source–target interactions)
+  - Environmental peak limit `ΔT_env ≤ C_e`: applied cellwise to all grid cells
+  - Neighbour-induced interference limit `ΔT_nb ≤ C_n`: applied cellwise to source-containing
+    cells, explicitly excluding the self-contribution of the local borehole
+- Optimization decision variable: vector of annual-mean loads `q̄ = (q̄₁, …, q̄_N)` [W/m];
+  objective is total mean heat-extraction rate `Σ q̄ᵢ Hᵢ` [W]
+- Performance options for large arrays (parallel evaluation, influence-radius cutoff, vertical
+  coarsening)
 
 ---
 
@@ -66,16 +77,14 @@ Then in the GUI:
 
 ### Borehole CSV
 
-A minimal CSV should contain (column names can be configured in the GUI):
-
 | column | description | unit |
 |---|---|---|
-| id | borehole identifier | – |
-| x, y | coordinates (local) **OR** lon, lat (geographic) | m or degrees |
-| H | borehole length | m |
-| q0 | initial thermal load per length | W/m |
+| `id` | borehole identifier | – |
+| `x`, `y` | local coordinates **OR** `lon`, `lat` (geographic) | m or degrees |
+| `H` | borehole length | m |
+| `q0` | initial thermal load per unit length | W/m |
 
-Example: `examples/BHE_***.csv`
+Example files: `examples/BHE_***.csv`
 
 ### Key parameters
 
