@@ -8,7 +8,6 @@ Created on Wed Feb 11 10:21:54 2026
 import numpy as np
 from scipy.integrate import quad
 
-# z_values can be a vector for computing the T change at multiple depths
 
 def precompute_integrals(z_values, H_array, R_w=0.1):
     z_values = np.asarray(z_values, dtype=float)
