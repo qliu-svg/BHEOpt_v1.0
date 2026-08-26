@@ -80,7 +80,7 @@ Then in the GUI:
 | column | description | unit |
 |---|---|---|
 | `id` | borehole identifier | – |
-| `x`, `y` | local coordinates OR `lon`, `lat` (geographic) | m or degrees |
+| `x`, `y` | local coordinates or `lon`, `lat` (geographic) | m or degrees |
 | `H` | borehole length | m |
 | `q0` | initial thermal load per unit length | W/m |
 
